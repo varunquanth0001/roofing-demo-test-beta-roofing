@@ -1,0 +1,357 @@
+{
+  "demo": false,
+  "testOnly": true,
+  "meta": {
+    "title": "TEST SITE · Beta Roofing | Roofing in Betaburg, ZZ",
+    "description": "Beta Roofing: roof repair and roof replacement for homes and businesses in Betaburg.",
+    "robots": "noindex,nofollow,noarchive"
+  },
+  "brand": {
+    "accent": "#d2432c",
+    "accentDeep": "#b5361f",
+    "section": "#cf422c"
+  },
+  "business": {
+    "name": "Beta Roofing",
+    "shortName": "Beta Roofing",
+    "wordmark": "Beta Roofing",
+    "phone": "(000) 010-0002",
+    "phoneE164": "+10000100002",
+    "email": null,
+    "address": null,
+    "hours": null,
+    "legal": "TEST SITE · fictional business, not a real company",
+    "social": []
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Reviews",
+    "areas": "Areas",
+    "crew": "Team",
+    "process": "Process",
+    "faq": "FAQ",
+    "cta": "Get a quote"
+  },
+  "drawer": {
+    "title": "What we do",
+    "link": "All services →",
+    "areasTitle": "Areas we serve",
+    "cards": [
+      {
+        "img": "service-roof-repair",
+        "badge": null,
+        "title": "Roof repair",
+        "meta": "Betaburg"
+      },
+      {
+        "img": "service-roof-replacement",
+        "badge": null,
+        "title": "Roof replacement",
+        "meta": "Betaburg"
+      }
+    ],
+    "promo": {
+      "kicker": "Quote",
+      "title": "Get a quote",
+      "line": "Tell us about your roof and we will follow up.",
+      "button": "Start"
+    }
+  },
+  "hero": {
+    "eyebrow": "Roofing contractor · Betaburg, ZZ",
+    "title": "Roofing for<br /><mark class=\"hl\">Betaburg.</mark>",
+    "lead": "Roof repair and roof replacement for homes in Betaburg.",
+    "cta": "Request a quote",
+    "cta2": "See services",
+    "meta": null,
+    "chips": [
+      [
+        "all",
+        "All"
+      ],
+      [
+        "roof",
+        "Roofing"
+      ],
+      [
+        "storm",
+        "Storm & claims"
+      ],
+      [
+        "other",
+        "More"
+      ]
+    ],
+    "countLabel": "services",
+    "scrollHint": "Scroll to fly in",
+    "cursorLabel": "View service",
+    "featuredLabel": "Featured service",
+    "diveCta": "All services"
+  },
+  "jobs": [
+    {
+      "k": "roof",
+      "label": "Roof repair",
+      "em": null,
+      "type": null,
+      "town": "Betaburg, ZZ",
+      "title": "Roof repair",
+      "img": "service-roof-repair",
+      "fact": null,
+      "meta": null,
+      "at": [
+        1240,
+        900
+      ]
+    },
+    {
+      "k": "roof",
+      "label": "Roof replacement",
+      "em": null,
+      "type": null,
+      "town": "Betaburg, ZZ",
+      "title": "Roof replacement",
+      "img": "service-roof-replacement",
+      "fact": null,
+      "meta": null,
+      "at": [
+        760,
+        520
+      ]
+    }
+  ],
+  "stats": {
+    "eyebrow": "01 · Beta Roofing",
+    "title": "Roofing in<br /><mark>Betaburg.</mark>",
+    "body": "Beta Roofing serves Betaburg.",
+    "cta": "Get a quote",
+    "signs": [
+      {
+        "count": 2,
+        "label": "roofing services"
+      },
+      {
+        "count": 1,
+        "label": "service area"
+      }
+    ],
+    "tickerLabel": "Why Beta Roofing",
+    "tickerBadge": null,
+    "ticker": [
+      [
+        "Roof repair",
+        ""
+      ],
+      [
+        "Roof replacement",
+        ""
+      ]
+    ]
+  },
+  "services": {
+    "eyebrow": "02 · Services",
+    "title": "What we<br /><mark>do.</mark>",
+    "cta": "Get a quote",
+    "countLabel": "services",
+    "linkLabel": "Request a quote",
+    "tabs": [
+      [
+        "all",
+        "All"
+      ],
+      [
+        "roof",
+        "Roofing"
+      ],
+      [
+        "storm",
+        "Storm & claims"
+      ],
+      [
+        "other",
+        "More"
+      ]
+    ],
+    "items": [
+      {
+        "f": "roof",
+        "big": true,
+        "tag": null,
+        "img": "service-roof-repair",
+        "title": "Roof repair",
+        "sub": null,
+        "specs": null,
+        "pin": [
+          "Betaburg",
+          "ZZ"
+        ]
+      },
+      {
+        "f": "roof",
+        "big": false,
+        "tag": null,
+        "img": "service-roof-replacement",
+        "title": "Roof replacement",
+        "sub": null,
+        "line": null,
+        "specs": null,
+        "pin": [
+          "Betaburg",
+          "ZZ"
+        ]
+      }
+    ]
+  },
+  "areas": {
+    "eyebrow": "03 · Areas we serve",
+    "title": "Betaburg and<br /><mark>nearby.</mark>",
+    "body": "Based in Betaburg. Pick a town to see it on the map.",
+    "cardLink": "Request a quote →",
+    "center": [
+      30,
+      46
+    ],
+    "items": [
+      {
+        "n": "Betaburg",
+        "c": "ZZ",
+        "x": 30,
+        "y": 46,
+        "img": "service-roof-repair",
+        "badge": "Service area",
+        "stats": null,
+        "note": "Beta Roofing serves Betaburg."
+      }
+    ]
+  },
+  "estimate": {
+    "eyebrow": "04 · Quote",
+    "title": "Tell us about<br /><mark class=\"dark\">your roof.</mark>",
+    "body": "Share a few details and we will follow up about your roof.",
+    "cardTitle": "Quick request",
+    "addressPlaceholder": "Street address",
+    "resultLabel": "Your roof",
+    "basis": "Quote request for {town}",
+    "pricing": null,
+    "noPriceNote": "Material, roof height and pitch all affect the price. You get an exact price after an inspection, with no guesswork.",
+    "cta": "Request my quote",
+    "foot": " "
+  },
+  "process": {
+    "eyebrow": "How it works · 4 steps",
+    "title": "4 steps,<br /><mark>start to finish.</mark>",
+    "counterLabel": "Step",
+    "steps": [
+      {
+        "t": "Get in touch",
+        "x": "Call (000) 010-0002 or send the form below with a few details about your roof.",
+        "img": "ba-storm-before",
+        "vf": "Get in touch",
+        "pin": null,
+        "live": "Get in touch",
+        "chip": "Get in touch",
+        "flap": "GET IN TOU"
+      },
+      {
+        "t": "Inspection",
+        "x": "The roof is looked over on site so the work can be scoped properly.",
+        "img": "ba-worn-before",
+        "vf": "Inspection",
+        "pin": null,
+        "live": "Inspection",
+        "chip": "Inspection",
+        "flap": "INSPECTION"
+      },
+      {
+        "t": "Proposal",
+        "x": "You receive the scope of work and the price before anything starts.",
+        "img": "service-roof-repair",
+        "vf": "Proposal",
+        "pin": null,
+        "live": "Proposal",
+        "chip": "Proposal",
+        "flap": "PROPOSAL"
+      },
+      {
+        "t": "The work",
+        "x": "Work is scheduled at a time that suits you.",
+        "img": "service-roof-replacement",
+        "vf": "The work",
+        "pin": null,
+        "live": "The work",
+        "chip": "The work",
+        "flap": "THE WORK"
+      }
+    ]
+  },
+  "crew": {
+    "show": false,
+    "items": []
+  },
+  "stories": {
+    "show": false,
+    "eyebrow": "05 · Reviews",
+    "title": "What customers<br /><mark>say.</mark>",
+    "plateTitle": "Review",
+    "photoNote": "Illustrative photo",
+    "items": []
+  },
+  "season": {
+    "show": false,
+    "towns": {},
+    "posts": []
+  },
+  "faq": {
+    "eyebrow": "05 · Questions",
+    "title": "Questions,<br /><mark>answered.</mark>",
+    "contactLead": "Didn’t see your question? Call",
+    "contactJoin": "or email",
+    "contactTail": "",
+    "cta": "Call us",
+    "tabs": [
+      [
+        "all",
+        "All"
+      ]
+    ],
+    "items": [
+      {
+        "g": "all",
+        "q": "What services do you offer?",
+        "a": "Roof repair and roof replacement."
+      },
+      {
+        "g": "all",
+        "q": "Which areas do you serve?",
+        "a": "Betaburg, ZZ."
+      },
+      {
+        "g": "all",
+        "q": "How do I get a quote?",
+        "a": "Use the form on this page, or call (000) 010-0002."
+      }
+    ]
+  },
+  "book": {
+    "eyebrow": "Quote",
+    "title": "Book a<br /><mark>roof visit.</mark>",
+    "body": "Choose a service and a time that suits you, and the team will be in touch to confirm.",
+    "cardTitle": "Request a quote",
+    "cardNote": "About 60 seconds",
+    "times": [
+      "9:00 am",
+      "11:00 am",
+      "1:00 pm",
+      "3:00 pm"
+    ],
+    "submit": "Request visit",
+    "thanks": "Thanks, <b>{name}</b>. This is a preview, so the form doesn't send yet. Call (000) 010-0002 to book.",
+    "under": null,
+    "callPrefix": "Or call"
+  },
+  "footer": {
+    "officeLabel": "Contact",
+    "companyTitle": "Company",
+    "newsletter": null
+  }
+}

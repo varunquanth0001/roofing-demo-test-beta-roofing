@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEST SITE · Beta Roofing | Roofing in Betaburg, ZZ</title>
+  <meta name="description" content="Beta Roofing: roof repair and roof replacement for homes and businesses in Betaburg." />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta property="og:title" content="TEST SITE · Beta Roofing | Roofing in Betaburg, ZZ" />
+  <meta property="og:description" content="Beta Roofing: roof repair and roof replacement for homes and businesses in Betaburg." />
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600;700&family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    All business-specific text comes from contractor.json.
+    data-t   = text content      data-h    = HTML (headings with <mark> accents)
+    data-show = remove element when the value is empty/false
+    data-tel / data-mail = phone / email links (removed when missing)
+    data-ph  = input placeholder
+  -->
+
+  <!-- ───────── NAV (pill bar + mega drawer) ───────── -->
+  <header class="nav" id="nav">
+    <div class="nav-bar">
+      <a href="#top" class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5" /><path d="M6 10v9h12v-9" /><path d="M10 19v-5h4v5" /></svg></span>
+        <span class="brand-name" data-t="business.shortName"></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <button class="nav-drop" id="navDrop" aria-expanded="false" aria-controls="drawer"><span data-t="nav.services"></span> <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></svg></button>
+        <a href="#work" data-show="stories.show" data-t="nav.work"></a>
+        <a href="#areas" data-t="nav.areas"></a>
+        <a href="#crew" data-show="crew.show" data-t="nav.crew"></a>
+        <a href="#process" data-show="nav.process" data-t="nav.process"></a>
+        <a href="#faq" data-t="nav.faq"></a>
+      </nav>
+      <div class="nav-right">
+        <a class="nav-phone" data-tel><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg><span data-t="business.phone"></span></a>
+        <a href="#estimate" class="pill pill-light nav-cta"><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg></span><span data-t="nav.cta"></span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <div class="drawer-in">
+        <div class="drawer-main">
+          <div class="drawer-head"><p class="mono muted" data-t="drawer.title"></p><a href="#services" class="mono link-red" data-t="drawer.link"></a></div>
+          <div class="drawer-cards" id="drawerCards"></div>
+        </div>
+        <div class="drawer-areas">
+          <p class="mono muted" data-t="drawer.areasTitle"></p>
+          <ul id="drawerAreas"></ul>
+        </div>
+        <a href="#estimate" class="drawer-worth">
+          <span class="mono" data-t="drawer.promo.kicker"></span>
+          <span class="serif dw-t" data-t="drawer.promo.title"></span>
+          <span class="dw-l" data-t="drawer.promo.line"></span>
+          <span class="pill pill-dark"><span class="dot-ico red"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span><span data-t="drawer.promo.button"></span></span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" data-t="nav.services"></a><a href="#work" data-show="stories.show" data-t="nav.work"></a><a href="#areas" data-t="nav.areas"></a><a href="#crew" data-show="crew.show" data-t="nav.crew"></a><a href="#faq" data-t="nav.faq"></a>
+    <a href="#estimate" class="pill pill-red" data-t="nav.cta"></a>
+  </div>
+
+  <main id="top">
+
+    <!-- ───────── HERO: aerial town → fly in → dive into the job ───────── -->
+    <section class="hero" id="hero">
+      <div class="hero-sticky" id="heroStage">
+        <div class="hero-world" aria-hidden="true">
+          <div class="hero-plane" id="plane">
+            <img class="plane-base" id="planeBase" alt="" />
+            <img class="plane-lit" id="planeLit" alt="" />
+            <div class="plane-pins" id="pins"></div>
+          </div>
+          <div class="hero-shade"></div>
+        </div>
+
+        <div class="hero-fade" id="heroFade">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="live"></span><span data-t="hero.eyebrow"></span></p>
+              <h1 class="display" data-h="hero.title"></h1>
+              <p class="lead" data-t="hero.lead"></p>
+              <div class="btn-row">
+                <a href="#estimate" class="pill pill-dark"><span class="dot-ico red"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg></span><span class="two-line"><small id="heroJobTown"></small><span data-t="hero.cta"></span></span></a>
+                <a href="#services" class="pill pill-ghost"><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" /></svg></span><span data-t="hero.cta2"></span></a>
+              </div>
+              <p class="mono meta" data-show="hero.meta" data-t="hero.meta"></p>
+              <div class="chips" id="heroChips"></div>
+            </div>
+          </div>
+          <p class="mono scroll-hint" data-t="hero.scrollHint"></p>
+        </div>
+
+        <div class="hero-dive" id="dive">
+          <img class="dive-img" id="diveImg" alt="" />
+          <div class="dive-shade"></div>
+          <div class="dive-copy" id="diveCopy">
+            <p class="eyebrow light"><span class="live"></span><span id="diveEyebrow"></span></p>
+            <h2 class="display-md" id="diveTitle"></h2>
+            <p class="dive-line" id="diveLine"></p>
+            <div class="card-facts">
+              <strong class="serif" id="diveFact"></strong>
+              <span class="mono" id="diveMeta"></span>
+            </div>
+            <div class="btn-row">
+              <a href="#services" class="pill pill-dark"><span class="dot-ico red"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span><span data-t="hero.diveCta"></span></a>
+              <a href="#estimate" class="pill pill-ghost" data-t="hero.cta"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cursor" id="cursor" aria-hidden="true"><span class="cur-ring"></span><span class="cur-lbl mono" data-t="hero.cursorLabel"></span></div>
+      </div>
+    </section>
+
+    <!-- ───────── 01 STATS: yard signs on a post ───────── -->
+    <section class="section cream stats" id="stats">
+      <div class="wrap stats-grid">
+        <div class="stats-copy">
+          <p class="eb"><i></i><span data-t="stats.eyebrow"></span></p>
+          <h2 class="hd" data-h="stats.title"></h2>
+          <p class="body" data-t="stats.body"></p>
+          <a href="#estimate" class="pill pill-soft"><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M6 10v9h12v-9" /></svg></span><span data-t="stats.cta"></span></a>
+        </div>
+        <div class="board" id="board"><span class="board-post"><i></i></span></div>
+      </div>
+      <div class="tick">
+        <div class="wrap tick-in">
+          <span class="mono tick-t"><i class="live"></i><span data-t="stats.tickerLabel"></span></span>
+          <div class="lane"><div class="track" id="track"></div></div>
+          <button class="tick-pause mono" id="tickPause" aria-pressed="false">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── 02 SERVICES: cards with opening doors ───────── -->
+    <section class="section cream" id="services">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="eb"><i></i><span data-t="services.eyebrow"></span></p>
+            <h2 class="hd" data-h="services.title"></h2>
+          </div>
+          <a href="#estimate" class="pill pill-soft"><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" /></svg></span><span data-t="services.cta"></span></a>
+        </div>
+        <div class="filter-row">
+          <div class="tabs" id="svcTabs"></div>
+          <span class="mono muted"><b id="svcCount"></b> <span data-t="services.countLabel"></span></span>
+        </div>
+        <div class="svc-grid" id="svcGrid"></div>
+      </div>
+    </section>
+
+    <!-- ───────── 03 AREAS: list + map + floating card ───────── -->
+    <section class="section navy" id="areas">
+      <div class="wrap areas-grid">
+        <div class="areas-copy">
+          <p class="eb light"><i></i><span data-t="areas.eyebrow"></span></p>
+          <h2 class="hd light" data-h="areas.title"></h2>
+          <p class="body light" data-t="areas.body"></p>
+          <ul class="area-list" id="areaList"></ul>
+        </div>
+        <div class="map" id="map">
+          <svg viewBox="0 0 100 76" preserveAspectRatio="none" aria-hidden="true">
+            <defs><pattern id="g" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M4 0H0V4" fill="none" stroke="currentColor" stroke-width=".12" /></pattern></defs>
+            <rect width="100" height="76" fill="url(#g)" opacity=".55" />
+            <path d="M36 0 C40 14 34 26 42 38 S38 62 44 76" class="river" />
+            <path d="M0 44 C30 41 60 48 100 40" class="road" />
+            <path d="M60 0 C58 24 64 48 62 76" class="road" />
+            <path d="M0 22 C25 26 70 20 100 28" class="road thin" />
+            <path d="M14 0 C18 30 10 50 18 76" class="road thin" />
+            <path d="M0 62 C40 58 70 66 100 60" class="road thin" />
+            <circle id="mapRadius" cx="48" cy="46" r="18" class="radius" />
+            <circle id="mapRadiusEdge" cx="48" cy="46" r="30" class="radius edge" />
+          </svg>
+          <div id="mapPins"></div>
+          <div class="map-card" id="mapCard"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── 04 ESTIMATE: red band, instant price ───────── -->
+    <section class="section red" id="estimate">
+      <div class="wrap est-grid">
+        <div class="est-copy">
+          <p class="eb on-red"><i></i><span data-t="estimate.eyebrow"></span></p>
+          <h2 class="hd light" data-h="estimate.title"></h2>
+          <p class="body light" data-t="estimate.body"></p>
+          <ol class="est-steps mono"><li><b>01</b>Size</li><li><b>02</b>Material</li><li><b>03</b>Pitch</li></ol>
+        </div>
+        <form class="est-card" id="estForm" novalidate>
+          <div class="card-top mono"><span><i class="live"></i><span data-t="estimate.cardTitle"></span></span><span>4 inputs</span></div>
+          <label class="f"><span class="lbl mono">Address</span><input id="estAddr" data-ph="estimate.addressPlaceholder" autocomplete="street-address" /></label>
+          <div class="f-row">
+            <label class="f"><span class="lbl mono">Town</span>
+              <span class="sel"><select id="estTown"></select></span>
+            </label>
+            <div class="f"><span class="lbl mono">Roof size (squares)</span>
+              <span class="stepper"><button type="button" id="sqMinus" aria-label="Fewer squares">−</button><output id="sqOut">20</output><button type="button" id="sqPlus" aria-label="More squares">+</button></span>
+            </div>
+          </div>
+          <div class="f"><span class="lbl mono">Material</span>
+            <span class="seg" data-name="material"><span class="seg-b"></span><button type="button" data-v="architectural" class="is-on">Shingle</button><button type="button" data-v="metal">Metal</button><button type="button" data-v="flat">Flat roof</button></span>
+          </div>
+          <div class="f"><span class="lbl mono">Pitch</span>
+            <span class="seg" data-name="pitch"><span class="seg-b"></span><button type="button" data-v="low">Low</button><button type="button" data-v="mid" class="is-on">Walkable</button><button type="button" data-v="steep">Steep</button></span>
+          </div>
+          <div class="est-box">
+            <div class="est-h"><span class="lbl mono" data-t="estimate.resultLabel"></span><span class="mono muted" id="estBasis"></span></div>
+            <div class="est-priced" id="estPriced">
+              <p class="range serif"><span id="estLo">$0</span><i>–</i><span id="estHi">$0</span></p>
+              <div class="scale" id="scale">
+                <div class="ticks" id="ticks"></div>
+                <span class="band" id="band"></span>
+                <span class="needle" id="needle"></span>
+                <div class="labs mono"><span>$5K</span><span>$15K</span><span>$25K</span><span>$35K</span><span>$45K</span><span>$55K</span></div>
+              </div>
+            </div>
+            <div class="est-unpriced" id="estUnpriced">
+              <p class="serif est-sum" id="estSummary"></p>
+              <p class="est-note" data-t="estimate.noPriceNote"></p>
+            </div>
+          </div>
+          <div class="est-go">
+            <a href="#book" class="pill pill-dark"><span class="dot-ico red"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span><span data-t="estimate.cta"></span></a>
+            <p class="mono muted" data-t="estimate.foot"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ───────── PROCESS: sticky viewfinder, scroll drives the steps ───────── -->
+    <section class="section cream process" id="process">
+      <div class="process-stick">
+        <div class="wrap process-grid">
+          <div class="pr-stage">
+            <div class="pr-frame" id="prFrame">
+              <img class="pr-img" id="prImg" alt="" />
+              <span class="pr-tone"></span>
+              <span class="pr-flash" id="prFlash"></span>
+              <span class="pr-vf"><i></i><i></i><i></i><i></i><b class="mono" id="prVf"></b></span>
+              <span class="pr-pin mono" id="prPin"></span>
+              <span class="pr-live mono" id="prLive"></span>
+              <span class="pr-chips" id="prChips"></span>
+              <span class="pr-count"><small class="mono" data-t="process.counterLabel"></small><span class="serif" id="prDay">1</span></span>
+            </div>
+            <span class="pr-sign" aria-hidden="true"><span class="pr-post"></span><span class="pr-arm"></span><span class="pr-hang"><i></i><i></i><span class="pr-flap serif" id="prFlap"></span></span></span>
+          </div>
+          <div class="pr-side">
+            <p class="eb"><i></i><span data-t="process.eyebrow"></span></p>
+            <h2 class="hd" data-h="process.title"></h2>
+            <ol class="pr-list" id="prList"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── CREW: flip cards (only with real people) ───────── -->
+    <section class="section cream" id="crew" data-show="crew.show">
+      <div class="wrap">
+        <div class="crew-top">
+          <div>
+            <p class="eb"><i></i><span data-t="crew.eyebrow"></span></p>
+            <h2 class="hd" data-h="crew.title"></h2>
+          </div>
+          <div class="crew-side">
+            <p class="body" data-t="crew.body"></p>
+            <a class="pill pill-soft" data-tel><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg></span><span data-t="crew.cta"></span></a>
+          </div>
+        </div>
+        <ul class="crew-grid" id="crewGrid"></ul>
+      </div>
+    </section>
+
+    <!-- ───────── STORIES: scroll-driven review slider (only with real reviews) ───────── -->
+    <section class="section dark stories" id="work" data-show="stories.show">
+      <div class="st-stick">
+        <div class="wrap st-in">
+          <div class="st-head">
+            <div>
+              <p class="eb light"><i></i><span data-t="stories.eyebrow"></span></p>
+              <h2 class="hd light" data-h="stories.title"></h2>
+            </div>
+            <div class="st-nav">
+              <span class="mono st-count"><b id="stNum">01</b> / <span id="stTotal">05</span></span>
+              <div class="st-dots" id="stDots"></div>
+              <button class="st-arr" id="stPrev" aria-label="Previous review"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" /></svg></button>
+              <button class="st-arr" id="stNext" aria-label="Next review"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+            </div>
+          </div>
+          <div class="st-grid">
+            <div class="st-frame">
+              <div class="st-photos" id="stPhotos"></div>
+              <span class="st-plate-w"><span class="st-plate"><i></i><i></i><b class="serif" data-t="stories.plateTitle"></b><small class="mono" id="stDays"></small></span></span>
+              <span class="st-note mono" data-show="stories.photoNote" data-t="stories.photoNote"></span>
+              <p class="st-cap"><span class="serif" id="stAddr"></span><small class="mono" id="stTown"></small></p>
+            </div>
+            <div class="st-tx">
+              <span class="stars" id="stStars"></span>
+              <blockquote class="serif" id="stQuote"></blockquote>
+              <div class="st-who"><span class="avatar serif" id="stAv"></span><p><b id="stName"></b> <span id="stWhere"></span></p></div>
+              <div class="st-duo" id="stDuo">
+                <p class="st-was"><span class="mono">Quoted</span><span class="serif" id="stQuoted"></span></p>
+                <p class="st-now"><span class="mono">Final bill</span><b class="serif" id="stFinal"></b><em class="mono" id="stDelta"></em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── SEASON: chart + notes (only with real data) ───────── -->
+    <section class="section cream" id="season" data-show="season.show">
+      <div class="wrap mk-in">
+        <div class="mk-l">
+          <p class="eb"><i></i><span data-t="season.eyebrow"></span></p>
+          <h2 class="hd"><span id="mkTitle"></span><br /><mark data-t="season.titleAccent"></mark></h2>
+          <div class="mk-stat">
+            <p class="serif mk-big" id="mkBig"></p>
+            <p class="mk-tx"><span class="mono muted" id="mkLabel"></span><span class="mk-chg"><b id="mkChg"></b> <span data-t="season.changeLabel"></span></span></p>
+          </div>
+          <div class="tabs" id="mkTabs"></div>
+          <div class="mk-chart">
+            <p class="mk-cap mono"><span data-t="season.chartCaption"></span><span class="muted mk-hint">Hover, or use ← → keys</span></p>
+            <div class="mk-box" id="mkBox" tabindex="0" role="img" data-aria="season.chartCaption"></div>
+            <div class="mk-months mono" id="mkMonths"></div>
+          </div>
+        </div>
+        <div class="mk-r" data-show="season.posts">
+          <p class="mono muted" data-t="season.postsTitle"></p>
+          <ul class="posts" id="posts"></ul>
+          <a href="#faq" class="pill pill-soft"><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span><span data-t="season.postsCta"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── FAQ: sticky left, tabs + numbered accordion ───────── -->
+    <section class="section cream" id="faq">
+      <div class="wrap fq-in">
+        <div class="fq-l">
+          <div class="fq-stk">
+            <p class="eb"><i></i><span data-t="faq.eyebrow"></span></p>
+            <h2 class="hd" data-h="faq.title"></h2>
+            <p class="body" id="faqContact"></p>
+            <a class="pill pill-soft" data-tel><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg></span><span data-t="faq.cta"></span></a>
+          </div>
+        </div>
+        <div class="fq-r">
+          <div class="tabs" id="fqTabs"></div>
+          <ul class="fq-list" id="fqList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── BOOK: pick the job, the day and the hour ───────── -->
+    <section class="section dark book" id="book">
+      <div class="bk-bg"><img alt="" class="bk-img" id="bkImg" loading="lazy" /><span class="bk-shade"></span></div>
+      <div class="wrap bk-in">
+        <div class="bk-copy">
+          <p class="eb light"><i></i><span data-t="book.eyebrow"></span></p>
+          <h2 class="hd hd-xl light" data-h="book.title"></h2>
+          <p class="body light" data-t="book.body"></p>
+        </div>
+        <div class="bk-side">
+          <form class="bk-card" id="bkForm">
+            <div class="bk-top"><p class="serif bk-title" data-t="book.cardTitle"></p><p class="mono muted"><i class="live"></i><span data-t="book.cardNote"></span></p></div>
+            <div class="bk-mini" id="bkMini"></div>
+            <div class="bk-step"><label class="bk-lb" for="bkJob"><b>1</b>The job</label><span class="sel"><select id="bkJob"></select></span></div>
+            <div class="bk-step"><p class="bk-lb"><b>2</b>The day</p><div class="bk-days" id="bkDays"></div></div>
+            <div class="bk-step"><p class="bk-lb"><b>3</b>The time</p><div class="bk-times" id="bkTimes"></div></div>
+            <div class="bk-step bk-contact"><input required name="name" placeholder="Your name" autocomplete="name" /><input required name="phone" type="tel" placeholder="Phone" autocomplete="tel" /></div>
+            <div class="bk-go"><p class="bk-sum" id="bkSum">Pick a day and a time</p><button class="pill pill-red" type="submit"><span class="dot-ico"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span><span data-t="book.submit"></span></button></div>
+          </form>
+          <div class="bk-under"><p class="mono" data-show="book.under" data-t="book.under"></p><a class="mono" data-tel><span data-t="book.callPrefix"></span> <span data-t="business.phone"></span></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer" id="footer">
+    <div class="wrap">
+      <div class="ft-top">
+        <div class="ft-office">
+          <p class="mono ft-h"><i class="live"></i><span data-t="footer.officeLabel"></span></p>
+          <p class="serif ft-addr" data-show="business.address" data-t="business.address"></p>
+          <p class="mono muted" data-show="business.hours" data-t="business.hours"></p>
+          <div class="ft-contact"><a data-tel data-t="business.phone"></a><a data-mail data-t="business.email"></a></div>
+        </div>
+        <nav class="ft-cols" aria-label="Footer">
+          <div><p class="mono muted" data-t="nav.services"></p><ul id="ftServices"></ul></div>
+          <div><p class="mono muted" data-t="footer.companyTitle"></p><ul id="ftCompany"></ul></div>
+        </nav>
+      </div>
+      <div class="ft-mid">
+        <div class="ft-news" data-show="footer.newsletter">
+          <p class="serif" data-t="footer.newsletter"></p>
+          <form class="ft-form" id="ftForm"><label class="sr" for="ftEmail">Your email</label><input id="ftEmail" type="email" required placeholder="you@email.com" /><button class="pill pill-light" type="submit">Sign up</button></form>
+        </div>
+        <div class="ft-soc" data-show="business.social"><p class="mono muted">Follow</p><ul id="ftSocial"></ul></div>
+      </div>
+      <p class="ft-word serif" id="ftWord"></p>
+      <div class="ft-base mono"><span>© <span id="yr"></span> <span data-t="business.name"></span></span><span id="ftLegal"></span><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <a class="float-call pill pill-red" aria-label="Call now" data-tel><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg>Call</a>
+
+  <script src="vendor/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
